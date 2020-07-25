@@ -10,7 +10,7 @@ html,body{
 }
 
 body{
-  background: white;
+  background: #393e46;
   min-height: 1500px;
 }
 /* you have to define the color of each nav elements like brand
@@ -18,29 +18,39 @@ and link seperately, it wont work else way */
 .navbar {
   text-align: center;
     transition: all 0.4s;
+    z-index: 5000;
+
 }
 
 .navbar .nav-link {
-    color: #fff;
+    color: #555;
+    display: block;
+    background: #18191f;
+    text-align: center;
+
+    border-radius: 15px;
+    box-shadow: -2px -2px 3px rgba(255, 255, 255, 0.05),
+                 3px 3px 3px rgba(0,0,0,0.2);
 
 }
 
 .navbar .nav-link:hover,
 .navbar .nav-link:focus {
-    color: #fff;
+    color: #00f3ff;
     text-decoration: none;
+    text-shadow: 0 0 15px #00f3ff;
 }
 
 .navbar .navbar-brand {
-    color: #fff;
+    color: black;
 }
 
 
 /* Change navbar styling on scroll */
 /* these two must be without spaces, with space the things mess up */
 .navbar.active {
-  background: rgb(238,174,202);
-background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  background: rgb(2,0,36);
+background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(20,2,2,1) 100%, rgba(0,212,255,1) 100%);
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -50,7 +60,7 @@ background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 
 
 .navbar.active .nav-link:hover,
 .navbar.active .nav-link:focus {
-    color: #555;
+    color: white;
     text-decoration: none;
 }
 
@@ -74,7 +84,14 @@ background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 
 
 
 .cs{
+  justify-content: center;
+  text-align: center;
   padding: 15px;
+}
+
+.navbar{
+  justify-content: center;
+  text-align: center;
 }
 
 section#first
@@ -95,7 +112,7 @@ section#first:before{
   bottom: 0;
   width: 100%;
   height: 200px;
-  background: linear-gradient(to top, #0a2a43, transparent);
+  background: linear-gradient(to top, #1b1c25, transparent);
   z-index: 1000;
 }
 
@@ -109,7 +126,7 @@ section#first:after{
   left: 0;
   width: 100%;
   height: 100%;
-  background: #0a2a43;
+  background: #1b1c25;
   z-index: 100;
   mix-blend-mode: color;
 }
@@ -128,7 +145,7 @@ section#first img{
 
 section#second
 {
-  background: #97b7d0;
+  background: #eeeeee;
 position: relative;
 z-index: 1000;
 width: 100%;
@@ -141,14 +158,100 @@ clip-path : circle(0px at center);
 
 }
 
+.fas{
+  font-size: 100px;
+  color: white;
+}
 
-.container2{
-  position: relative;
+.mainh{
+  text-align: center;
+}
+
+
+section#third{
   margin-top: 200vh;
-  background: white;
-  padding: 100px;
-  z-index: 1001;
+  background: #1e1e1e;
+position: relative;
+z-index: 1800;
+width: 100%;
+height: 100vh;
+overflow: hidden;
+display: flex;
+justify-content: center;
+align-items: center;
+}
 
+
+.container{
+  position: relative;
+
+
+  padding: 100px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1e1e1e;
+  /* min-height: 100vh; */
+
+}
+
+.container .card{
+  position: relative;
+  width: 300px;
+  height: 200px;
+  border: none;
+  margin: 25px;
+}
+
+
+.container .card .face{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+}
+
+.container .card .face.face1{
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  transform-origin: bottom;
+}
+
+.container .card .face.face1 i{
+  max-width: 100px;
+}
+
+.container .card .face.face1 h3{
+  margin: 10px 0 0;
+  color: #fff;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+
+.container .card:hover .face.face1{
+  transform: translateY(-100%) rotateX(90deg);
+  background: #ff0057;
+}
+
+.container .card .face.face2{
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  transform-origin: top;
+  transform: translateY(100%) rotateX(90deg);
+}
+
+.container .card:hover .face.face2{
+  transform: translateY(0%) rotateX(0deg);
 }
 
 
@@ -157,9 +260,24 @@ clip-path : circle(0px at center);
   width: 0px;
   border-radius:50%;
     /* background-color:yellow; */
+box-shadow:20px 20px 50px black;
+}
 
 
-  box-shadow:20px 20px 50px black;
+#text3{
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  justify-content: center;
+  color: black;
+  font-size: 8em;
+
+  text-shadow: 3px 3px 7px black;
+  transition: 0.5s;
+
+}
+
+#text3:hover{
+  color: #00f3ff;
 }
 
 
@@ -174,9 +292,19 @@ clip-path : circle(0px at center);
 #text{
   font-family: 'Poppins', sans-serif;
   position: relative;
-  color: blue;
+  color: black;
   font-size: 10em;
   z-index: 1;
+  text-shadow: 3px 3px 7px black;
+}
+
+#subh1,#subh2{
+
+  font-family: 'Dancing Script', cursive;
+  position: relative;
+  color: black;
+  font-size: 5em;
+  z-index: 4000;
   text-shadow: 3px 3px 7px black;
 }
 

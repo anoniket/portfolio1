@@ -24,12 +24,13 @@ $("#mountain").css("top",-val/7+0.10+"px");
 $("#road").css("top",val/7+0.10+"px");
 $("#text").css("top",val+"px");
 $("#second").css("clipPath","circle("+val+"px at center");
+
 // $("#second").css("bottom",val+"px");
 
 
 
 if(val>320){
-  $(".navbar").addClass("active");
+  // $(".navbar").addClass("active");
   $(".cs").css("padding","5px");
   $(".second").css("position","fixed");
 
@@ -58,7 +59,7 @@ else if(val<700){
 
 }
 else{
-  $(".navbar").removeClass("active");
+  // $(".navbar").removeClass("active");
   $(".cs").css("padding","20px");
 }
 
