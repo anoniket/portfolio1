@@ -2,6 +2,26 @@
 //https://jsfiddle.net/bootstrapious/ravpqxok
 
 
+
+$(document).ready(function(){
+
+  setInterval(function(){
+    var x = $("#text3").css("color");
+    if(x==="rgb(0, 0, 0)"){
+      $("#text3").css("color","#00f3ff");
+    }
+    else if(x==="rgb(0, 243, 255)"){
+      $("#text3").css("color","black");
+    }
+
+  }, 1000);
+
+});
+
+
+
+
+
 $("a[href='#first']").click(function(){
     $('html, body').animate({scrollTop : 0},800);
     return false;
@@ -12,6 +32,12 @@ $("a[href='#second']").click(function(){
     $('html, body').animate({scrollTop : 1340},800);
     return false;
 });
+
+$("a[href='#third']").click(function(){
+    $('html, body').animate({scrollTop : 2167},800);
+    return false;
+});
+
 
 
 window.addEventListener("scroll",function(){
@@ -26,6 +52,101 @@ $("#text").css("top",val+"px");
 $("#second").css("clipPath","circle("+val+"px at center");
 
 // $("#second").css("bottom",val+"px");
+
+// //highlight that particular nav item acc to Section
+if(val>=0 && val<714){
+
+  $(".link1").css({"color":"#00f3ff",
+"textShadow":"0 0 15px #00f3ff"
+});
+
+$(".link1").unbind('mouseenter mouseleave');
+
+
+$(".link2, .link3").css({  "color": "#555",
+  "display": "block",
+  "background": "#18191f",
+  "textShadow":"none"
+
+});
+
+$(".link2, .link3").hover(function(){
+  $(this).css({
+    "color":"#00f3ff",
+  "textShadow":"0 0 15px #00f3ff"
+  });
+  }, function(){
+  $(this).css({ "color": "#555",
+    "display": "block",
+    "background": "#18191f",
+    "textShadow":"none"});
+});
+
+}
+
+else if(val>714 && val<2090){
+
+$(".link2").css({"color":"#00f3ff",
+"textShadow":"0 0 15px #00f3ff"
+});
+
+$(".link2").unbind('mouseenter mouseleave');
+
+$(".link1, .link3").css({  "color": "#555",
+  "display": "block",
+  "background": "#18191f",
+  "textShadow":"none"
+
+});
+
+$(".link1, .link3").hover(function(){
+  $(this).css({
+    "color":"#00f3ff",
+  "textShadow":"0 0 15px #00f3ff"
+  });
+  }, function(){
+  $(this).css({ "color": "#555",
+    "display": "block",
+    "background": "#18191f",
+    "textShadow":"none"});
+});
+
+}
+else if(val>2090){
+
+  $(".link3").css({"color":"#00f3ff",
+  "textShadow":"0 0 15px #00f3ff"
+  });
+
+  $(".link3").unbind('mouseenter mouseleave');
+
+  $(".link1 , .link2").css({  "color": "#555",
+    "display": "block",
+    "background": "#18191f",
+    "textShadow":"none"
+
+  });
+
+  $(".link1, .link2").hover(function(){
+    $(this).css({
+      "color":"#00f3ff",
+    "textShadow":"0 0 15px #00f3ff"
+    });
+    }, function(){
+    $(this).css({ "color": "#555",
+      "display": "block",
+      "background": "#18191f",
+      "textShadow":"none"});
+  });
+
+
+}
+// else if(val>710 && val<2167){
+//   $(".link2").css({"color":"#00f3ff",
+// "textShadow":"0 0 15px #00f3ff"
+// });
+// $(".link1").removeClass("nav-link");
+// }
 
 
 

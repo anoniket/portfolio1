@@ -22,7 +22,7 @@ and link seperately, it wont work else way */
 
 }
 
-.navbar .nav-link {
+.navbar .nav-link{
     color: #555;
     display: block;
     background: #18191f;
@@ -34,8 +34,7 @@ and link seperately, it wont work else way */
 
 }
 
-.navbar .nav-link:hover,
-.navbar .nav-link:focus {
+.navbar .nav-link:hover{
     color: #00f3ff;
     text-decoration: none;
     text-shadow: 0 0 15px #00f3ff;
@@ -45,6 +44,12 @@ and link seperately, it wont work else way */
     color: black;
 }
 
+
+/* .link1:hover{
+  color: #00f3ff;
+  text-decoration: none;
+  text-shadow: 0 0 15px #00f3ff;
+} */
 
 /* Change navbar styling on scroll */
 /* these two must be without spaces, with space the things mess up */
@@ -281,6 +286,7 @@ box-shadow:20px 20px 50px black;
 }
 
 
+
 #text2{
   color: #0a2a43;
 }
@@ -321,7 +327,7 @@ box-shadow:20px 20px 50px black;
 
 .typewriter h1 {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid white; /* The typwriter cursor */
+  border-right: .15em solid black; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: .15em; /* Adjust as needed */
@@ -339,5 +345,5 @@ box-shadow:20px 20px 50px black;
 /* The typewriter cursor effect */
 @keyframes blink-caret {
   from, to { border-color: transparent }
-  50% { border-color: white; }
+  50% { border-color: black; }
 }
