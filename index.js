@@ -2,6 +2,24 @@
 //https://jsfiddle.net/bootstrapious/ravpqxok
 
 
+//card animation on mousemove
+
+$(document).mousemove(function(e){
+  document.querySelectorAll(".card").forEach(card => {
+    const speed = card.getAttribute("data-speed");
+
+    var x = (window.innerWidth - e.pageX*speed)/50;
+
+
+    card.style.transform = `translateX(${x}px`;
+    // card.style.transform = "translateY("+y+"px)";
+
+  })
+
+})
+
+
+//typewriter effect
 
 
 const TypeWriter = function(txtElement, words, wait = 800) {
@@ -71,15 +89,7 @@ function init() {
 
 
 
-
-
-
-
-
-
-
-
-
+//blinking of myskills text
 
 $(document).ready(function(){
 
@@ -98,6 +108,7 @@ $(document).ready(function(){
 
 
 
+//nav bar links functionality
 
 
 $("a[href='#first']").click(function(){
@@ -116,6 +127,13 @@ $("a[href='#third']").click(function(){
     return false;
 });
 
+$("a[href='#fourth']").click(function(){
+  $('html, body').animate({scrollTop : 2942},800);
+  return false;
+});
+
+
+//scroll animation , parallax, one page scroll
 
 
 window.addEventListener("scroll",function(){
@@ -129,10 +147,13 @@ $("#road").css("top",val/8+0.10+"px");
 $("#text").css("top",val+"px");
 $("#second").css("clipPath","circle("+val+"px at center");
 
-// $("#second").css("bottom",val+"px");
+
 
 // //highlight that particular nav item acc to Section
 if(val>=0 && val<714){
+
+
+//section 1, highlight navitem 1 and disable hover functionality
 
   $(".link1").css({"color":"#00f3ff",
 "textShadow":"0 0 15px #00f3ff"
@@ -141,14 +162,14 @@ if(val>=0 && val<714){
 $(".link1").unbind('mouseenter mouseleave');
 
 
-$(".link2, .link3").css({  "color": "#555",
+$(".link2, .link3, .link4").css({  "color": "#555",
   "display": "block",
   "background": "#18191f",
   "textShadow":"none"
 
 });
 
-$(".link2, .link3").hover(function(){
+$(".link2, .link3, .link4").hover(function(){
   $(this).css({
     "color":"#00f3ff",
   "textShadow":"0 0 15px #00f3ff"
@@ -164,20 +185,22 @@ $(".link2, .link3").hover(function(){
 
 else if(val>714 && val<2010){
 
+  //section 2, highlight navitem 2 and disable hover functionality
+
 $(".link2").css({"color":"#00f3ff",
 "textShadow":"0 0 15px #00f3ff"
 });
 
 $(".link2").unbind('mouseenter mouseleave');
 
-$(".link1, .link3").css({  "color": "#555",
+$(".link1, .link3, .link4").css({  "color": "#555",
   "display": "block",
   "background": "#18191f",
   "textShadow":"none"
 
 });
 
-$(".link1, .link3").hover(function(){
+$(".link1, .link3, .link4").hover(function(){
   $(this).css({
     "color":"#00f3ff",
   "textShadow":"0 0 15px #00f3ff"
@@ -190,7 +213,9 @@ $(".link1, .link3").hover(function(){
 });
 
 }
-else if(val>2010){
+else if(val>2010 && val<2880){
+
+  //section 3, highlight navitem 3 and disable hover functionality
 
   $(".link3").css({"color":"#00f3ff",
   "textShadow":"0 0 15px #00f3ff"
@@ -198,14 +223,14 @@ else if(val>2010){
 
   $(".link3").unbind('mouseenter mouseleave');
 
-  $(".link1 , .link2").css({  "color": "#555",
+  $(".link1 , .link2, .link4").css({  "color": "#555",
     "display": "block",
     "background": "#18191f",
     "textShadow":"none"
 
   });
 
-  $(".link1, .link2").hover(function(){
+  $(".link1, .link2, .link4").hover(function(){
     $(this).css({
       "color":"#00f3ff",
     "textShadow":"0 0 15px #00f3ff"
@@ -219,57 +244,97 @@ else if(val>2010){
 
 
 }
-// else if(val>710 && val<2167){
-//   $(".link2").css({"color":"#00f3ff",
-// "textShadow":"0 0 15px #00f3ff"
-// });
-// $(".link1").removeClass("nav-link");
-// }
+
+else if(val>2880){
+
+  $(".link4").css({"color":"#00f3ff",
+  "textShadow":"0 0 15px #00f3ff"
+  });
+
+  $(".link4").unbind('mouseenter mouseleave');
+
+  $(".link1 , .link2, .link3").css({  "color": "#555",
+    "display": "block",
+    "background": "#18191f",
+    "textShadow":"none"
+
+  });
+
+  $(".link1, .link2, .link3").hover(function(){
+    $(this).css({
+      "color":"#00f3ff",
+    "textShadow":"0 0 15px #00f3ff"
+    });
+    }, function(){
+    $(this).css({ "color": "#555",
+      "display": "block",
+      "background": "#18191f",
+      "textShadow":"none"});
+  });
 
 
+}
 
-if(val>320){
-  // $(".navbar").addClass("active");
+//navbar padding change
+
+if(val>=320){
   $(".cs").css("padding","5px");
-  $(".second").css("position","fixed");
-
-
-if(val>338){
-  $(".dd").css("display","block");
-$(".dd").addClass("typewriter");
-
-
-
-}
-
-if(val>700){
-  $("#second").css({"position":"fixed",
-"top":"0",
-"left" : "0"
-});
-
-
-
-}
-
-else if(val<700){
-  $("#second").css("position","relative");
-}
-
 }
 else{
-  // $(".navbar").removeClass("active");
   $(".cs").css("padding","20px");
 }
 
 
-if(val>989){
-  $(".porti").css("width",(val-989)+"px");
+//second section parallax animation with position change
+
+if(val>675 && val<2024){
+  $("#second").css({"position":"fixed",
+"top":"0",
+"left" : "0"
+});
 }
 
-else{
-  $(".porti").css("width","0px");
+
+
+else if(val<675){
+  $("#second").css("position","relative");
 }
+
+else if(val>2020){
+  $("#second").css({"position":"fixed",
+  "top":"",
+  "left" : "0"
+  }); 
+
+  
+
+}
+
+
+
+//profile pic circle zoom animation
+
+if(val>989&&val<1292){
+  $(".profileImg").css("width",(val-989)+"px");
+}
+
+else if(val>1292){
+  $(".profileImg").css("width","302.2px");
+}
+
+else {
+  $(".profileImg").css("width","0px");
+}
+
+
+if(val<2889){
+  $("#fourth #text3").css("opacity","0");
+}
+if(val>=2889){
+  $("#fourth #text3").css("opacity","1");
+
+}
+
 
 
 })
