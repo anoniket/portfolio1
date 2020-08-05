@@ -528,13 +528,27 @@ footer p{
 }
 
 
+@media only screen and (max-width: 600px) and (min-width: 20px)  {
 
-/* @media only screen and (max-width: 600px) and (min-width: 320px)  {
-
-
+  #subh1{
+    font-size: 3.8rem;
+  }
+    
   #text{
     font-size: 8rem;
   }
   
   
-  } */
+  .navbar-toggler{
+    position: absolute;
+    right: 15%;
+  }
+  
+  .nav-link{
+    margin-bottom: 15%;
+    margin-top: 15%;
+  }
+  
+  
+  
+    }
