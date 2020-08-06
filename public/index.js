@@ -136,11 +136,21 @@ $("a[href='#fourth']").click(function(){
 //scroll animation , parallax, one page scroll
 
 
+var val2 = $(window).width();
+console.log(val2);
+
 window.addEventListener("scroll",function(){
   var val = window.scrollY;
 console.log(val);
 $("#bg").css("top",val+0.5+"px");
-$("#moon").css("left",-val+0.5+"px");
+if(val2<600){
+  console.log("a");
+  $("#moon").css("right",40+val+0.5+"px");
+}
+else if(val2>600){
+  $("#moon").css("right",240+val+0.5+"px");
+  console.log("ad");
+}
 $("#text").css("letter-spacing",val/2+"px");
 $("#mountain").css("top",(-val/8)-50+"px");
 $("#road").css("top",val/8+0.10+"px");
