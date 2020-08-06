@@ -151,10 +151,11 @@ else if(val2>600){
   $("#moon").css("right",240+val+0.5+"px");
   console.log("ad");
 }
-$("#text").css("letter-spacing",val/2+"px");
+
+$("#text").css("letter-spacing",val/2.5+"px");
 $("#mountain").css("top",(-val/8)-50+"px");
 $("#road").css("top",val/8+0.10+"px");
-$("#text").css("top",val+"px");
+$("#text").css("top",val/2.5+"px");
 $("#second").css("clipPath","circle("+val+"px at center");
 
 
@@ -337,14 +338,47 @@ else {
 }
 
 
-if(val<2889){
+if(val<2889||val>2980){
   $("#fourth #text3").css("opacity","0");
 }
-if(val>=2889){
+else if(val>2889){
   $("#fourth #text3").css("opacity","1");
 
 }
 
 
+
+if(val>2890 && val<3475){
+  $(".pro1").css("backgroundColor","rgb(30, 30, 30)");
+  $(".pro1 .head").css("color","white");
+  $(".pro1 .detail").css("color","#00f3ff");
+  $(".pro2,.pro3").css("backgroundColor","rgb(238,238,238)");
+  $(".pro3 .head").css("color","black");
+  $(".pro3 .detail").css("color","black");
+  $(".pro2 .head").css("color","black");
+  $(".pro2 .detail").css("color","black");
+}
+else if(val>3475 && val<4080) {
+  $(".pro2").css("backgroundColor","rgb(30, 30, 30)");
+  $(".pro2 .head").css("color","white");
+  $(".pro2 .detail").css("color","#00f3ff");
+   $(".pro1,.pro3").css("backgroundColor","rgb(238,238,238)");
+   $(".pro1 .head").css("color","black");
+   $(".pro1 .detail").css("color","black");
+   $(".pro3 .head").css("color","black");
+   $(".pro3 .detail").css("color","black");
+  
+}
+
+else if(val>4080){
+  $(".pro3").css("backgroundColor","rgb(30, 30, 30)");
+   $(".pro3 .head").css("color","white");
+   $(".pro3 .detail").css("color","#00f3ff");
+   $(".pro1,.pro2").css("backgroundColor","rgb(238,238,238)");
+   $(".pro1 .head").css("color","black");
+   $(".pro1 .detail").css("color","black");
+   $(".pro2 .head").css("color","black");
+   $(".pro2 .detail").css("color","black");
+}
 
 })
