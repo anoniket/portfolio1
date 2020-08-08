@@ -589,4 +589,39 @@ footer p{
   display: none;
 }
 
+
+.box1{
+  position : absolute;
+  top:0;
+  left: 0;
+  margin-bottom: 50px;
+  z-index: 1;
+}
+
+.box1 #text3{
+  font-size: 5.7rem;
+  margin-top: 70px;
+}
+
+
+.box1 h3{
+  text-align: center;
+}
+
+#third .container{
+  position: absolute;
+  top: 350px;
+  display: block;
+  padding: 0;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+
+section#third{
+  height: 200vh;
+  overflow: none;
+}
+
+
   }
