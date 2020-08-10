@@ -586,9 +586,27 @@ footer p{
 }
 
 .soci{
-  display: none;
+  display: inline;
+  position : absolute;
+  top: 820vh;
+  left:0;
+  margin-top: 0;
+
 }
 
+.soci ul{
+  display: inline;
+  margin: 0;
+  list-style-type: none;
+
+}
+
+.soci ul li{
+  margin-top: 0;
+  margin-left: 30px;
+  display: inline;
+  
+}
 
 .box1{
   position : absolute;
@@ -617,11 +635,99 @@ footer p{
   margin-top: 50px;
 }
 
+#third .container .card{
+  margin: 58px auto !important;
+}
+
 
 section#third{
   height: 200vh;
   overflow: none;
 }
+
+
+
+section#fourth{
+  height: 350vh;
+}
+
+#fourth #text3{
+  font-size: 4rem;
+  left: 0;
+  opacity: 1;
+  text-shadow: 1.8px 1.8px 5.2px black;
+}
+
+section#fourth .wrapper{
+  position: static !important; 
+  display: block !important; 
+  width: 100% !important; 
+
+}
+
+#fourth .wrapper .left{
+  width: 250px;
+  position: relative;
+  right: 19px;
+  top: 100px;
+}
+
+.projm{
+width: 250px;
+padding-bottom: 150px;
+margin-bottom: 150px;
+}
+
+section#fourth{
+  height: 350vh;
+}
+
+
+#fourth .right{
+  margin-top: 0 !important;
+  position: relative;
+  left: 0;
+  bottom: 1615px;
+
+}
+
+#fourth .right .one{
+  margin-bottom: 50px;
+  position: relative;
+  left: -60px;
+}
+
+#fourth .right .two{
+  position: relative;
+  left: -60px;
+  top: 100px;
+}
+
+#fourth .right #item3{
+  position: relative;
+  left: -60px;
+  margin-top: 50px;
+  top: 260px;
+}
+
+#fourth .right .item .proj1{
+  width: 250px;
+
+}
+
+
+footer{
+  height: 60px !important;
+}
+
+footer p{
+  padding-top: 0;
+  font-size: 0.8rem;
+  position: relative;
+  top: 22px;
+}
+
+
 
 
   }

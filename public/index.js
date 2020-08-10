@@ -339,7 +339,10 @@ else {
 
 
 if(val<2889||val>2980){
-  $("#fourth #text3").css("opacity","0");
+  if(val2>500){
+    $("#fourth #text3").css("opacity","0");
+  }
+  
 }
 else if(val>2889){
   $("#fourth #text3").css("opacity","1");
